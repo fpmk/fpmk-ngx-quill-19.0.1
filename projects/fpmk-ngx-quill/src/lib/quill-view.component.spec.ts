@@ -50,7 +50,7 @@ describe('Basic QuillViewComponent', () => {
 
     expect(element.querySelectorAll('.ql-editor').length).toBe(1)
     expect(fixture.componentInstance.quillEditor).toBeDefined()
-    const viewElement = element.querySelector('.ql-container.ql-snow.ngx-quill-view > .ql-editor')
+    const viewElement = element.querySelector('.ql-container.ql-snow.fpmk-ngx-quill-view > .ql-editor')
     expect(viewElement).toBeDefined()
   })
 })

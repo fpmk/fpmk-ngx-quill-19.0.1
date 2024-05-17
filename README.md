@@ -1,7 +1,7 @@
-# ngx-quill ![Build Status](https://github.com/KillerCodeMonkey/ngx-quill/workflows/CI/badge.svg)
+# fpmk-ngx-quill ![Build Status](https://github.com/KillerCodeMonkey/fpmk-ngx-quill/workflows/CI/badge.svg)
 <img src="https://cloud.githubusercontent.com/assets/2264672/20601381/a51753d4-b258-11e6-92c2-1d79efa5bede.png" width="200px">
 
-ngx-quill is an angular (>=2) module for the [Quill Rich Text Editor](https://quilljs.com/) containing all components you need.
+fpmk-ngx-quill is an angular (>=2) module for the [Quill Rich Text Editor](https://quilljs.com/) containing all components you need.
 
 ## Donate/Support
 
@@ -20,7 +20,7 @@ LTC Wallet Address:
 
 ## Examples
 
-- [Advanced Demo](https://github.com/killerCodeMonkey/ngx-quill-example)
+- [Advanced Demo](https://github.com/killerCodeMonkey/fpmk-ngx-quill-example)
   - integration of [quill-emoji](https://github.com/contentco/quill-emoji)
   - integration of [quill-mention](https://github.com/afconsult/quill-mention)
   - integration of [quill-image-resize](https://github.com/kensnyder/quill-image-resize-module)
@@ -37,8 +37,8 @@ LTC Wallet Address:
   - bubble toolbar
   - activate formats after editor initialisation, e.g. rtl direction
   - present quilljs content with the `quill-view` and `quill-view-html` component
-- [Ionic Demo](https://github.com/KillerCodeMonkey/ngx-quill-ionic)
-- [Angular Universal](https://github.com/KillerCodeMonkey/ngx-quill-universal-example)
+- [Ionic Demo](https://github.com/KillerCodeMonkey/fpmk-ngx-quill-ionic)
+- [Angular Universal](https://github.com/KillerCodeMonkey/fpmk-ngx-quill-universal-example)
 
 ## Compatibility to Angular Versions
 
@@ -46,7 +46,7 @@ LTC Wallet Address:
   <thead>
     <tr>
       <th>Angular</th>
-      <th>ngx-quill</th>
+      <th>fpmk-ngx-quill</th>
       <th>supported</th>
     </tr>
   </thead>
@@ -89,9 +89,9 @@ LTC Wallet Address:
 
 ## Installation
 
-- `npm install ngx-quill`
-- for projects using Angular < v5.0.0 install `npm install ngx-quill@1.6.0`
-- install `@angular/core`, `@angular/common`, `@angular/forms`, `@angular/platform-browser`, `quill` v1.x, `@types/quill` v1.x  and `rxjs` - peer dependencies of ngx-quill
+- `npm install fpmk-ngx-quill`
+- for projects using Angular < v5.0.0 install `npm install fpmk-ngx-quill@1.6.0`
+- install `@angular/core`, `@angular/common`, `@angular/forms`, `@angular/platform-browser`, `quill` v1.x, `@types/quill` v1.x  and `rxjs` - peer dependencies of fpmk-ngx-quill
 - include theme styling: 	**bubble.css or snow.css of quilljs** in your index.html (you can find them in `node_modules/quill/dist`), or add them in your css/scss files  with `@import` statements, or add them external stylings in your build process.
   - Example at the beginning of your style.(s)css:
    ```TS
@@ -102,9 +102,9 @@ LTC Wallet Address:
 
 ### For standard webpack, angular-cli and tsc builds
 
-- import `QuillModule` from `ngx-quill`:
+- import `QuillModule` from `fpmk-ngx-quill`:
 ```TS
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'fpmk-ngx-quill'
 ```
 - add `QuillModule` to the imports of your NgModule:
 ```TS
@@ -126,16 +126,16 @@ class YourModule { ... }
 
 ## Angular Universal
 
-### ngx-quill >= v10
+### fpmk-ngx-quill >= v10
 
 Nothing to do here :)
 
 ## Global Config
 
-It's possible to set custom default modules and Quill config options with the import of the `QuillConfigModule` from the `ngx-quill/config`. This module provides a global config, but eliminates the need to import the `ngx-quill` library into the vendor bundle:
+It's possible to set custom default modules and Quill config options with the import of the `QuillConfigModule` from the `fpmk-ngx-quill/config`. This module provides a global config, but eliminates the need to import the `fpmk-ngx-quill` library into the vendor bundle:
 
 ```ts
-import { QuillConfigModule } from 'ngx-quill/config';
+import { QuillConfigModule } from 'fpmk-ngx-quill/config';
 
 @NgModule({
   imports: [
@@ -166,7 +166,7 @@ The `QuillModule` exports the `defaultModules` if you want to extend them :).
 
 ### Suppress global register warnings
 
-Per default when `Quill.register` is called and you are overwriting an already existing module, QuillJS logs a warning. If you pass `customOptions` or `customModules` ngx-quill is registering those modules/options/formats for you.
+Per default when `Quill.register` is called and you are overwriting an already existing module, QuillJS logs a warning. If you pass `customOptions` or `customModules` fpmk-ngx-quill is registering those modules/options/formats for you.
 
 In e.g. an angular univeral project your `AppModule` and so `QuillModule.forRoot()` is executed twice (1x server side, 1x browser). QuillJS is running in a mocked env on server side, so it is intendet that every register runs twice.
 
@@ -272,7 +272,7 @@ customModules = [
   { path: 'modules/blotFormatter', implementation: BlotFormatter$ }
 ]
 ```
-- checkout the demo repo about usage of `customOptions` and `customModules` [Demo Repo](https://github.com/KillerCodeMonkey/ngx-quill-example/blob/2e72dc75e6d9b423f67b57b17cc8fb527dd694e4/src/app/app.module.ts#L67)
+- checkout the demo repo about usage of `customOptions` and `customModules` [Demo Repo](https://github.com/KillerCodeMonkey/fpmk-ngx-quill-example/blob/2e72dc75e6d9b423f67b57b17cc8fb527dd694e4/src/app/app.module.ts#L67)
 - possibility to create a custom toolbar via projection slot `[quill-editor-toolbar]`:
 
 **Try to not use much angular magic here, like `(output)` listeners. Use native EventListeners**
@@ -388,14 +388,14 @@ In most cases the `html` format is used, but it is not recommended by QuillJS, b
 
 This content object is easy to store and to maintain, because there is no html syntax parsing necessary. So you even switching to another editor is very easy when you can work with that.
 
-`ngx-quill` provides some helper components, to present quilljs content.
+`fpmk-ngx-quill` provides some helper components, to present quilljs content.
 
 ### QuillViewComponent - Using QuillJS to render content
 
 In general QuillJS recommends to use a QuillJS instance to present your content.
 Just create a quill editor without a toolbar and in readonly mode. With some simple css lines you can remove the default border around the content.
 
-As a helper `ngx-quill` provides a component where you can pass many options of the `quill-editor` like modules, format, formats, customOptions, but renders only the content as readonly and without a toolbar. Import is the `content` input, where you can pass the editor content you want to present.
+As a helper `fpmk-ngx-quill` provides a component where you can pass many options of the `quill-editor` like modules, format, formats, customOptions, but renders only the content as readonly and without a toolbar. Import is the `content` input, where you can pass the editor content you want to present.
 
 #### Config
 
@@ -441,7 +441,7 @@ After that your content should look like what you expected.
 
 If you store html in your database, checkout your backend code, sometimes backends are stripping unwanted tags as well ;).
 
-As a helper `ngx-quill` provides a component where you can simply pass your html string and the component does everything for you to render it:
+As a helper `fpmk-ngx-quill` provides a component where you can simply pass your html string and the component does everything for you to render it:
 
 - add necessary css classes
 - bypass html sanitation

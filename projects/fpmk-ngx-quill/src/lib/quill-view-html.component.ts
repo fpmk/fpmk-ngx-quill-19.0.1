@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common'
   encapsulation: ViewEncapsulation.None,
   selector: 'quill-view-html',
   styles: [`
-.ql-container.ngx-quill-view-html {
+.ql-container.fpmk-ngx-quill-view-html {
   border: 0;
 }
 `],
@@ -44,10 +44,10 @@ export class QuillViewHTMLComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.theme) {
       const theme = changes.theme.currentValue || (this.service.config.theme ? this.service.config.theme : 'snow')
-      this.themeClass = `ql-${theme} ngx-quill-view-html`
+      this.themeClass = `ql-${theme} fpmk-ngx-quill-view-html`
     } else if (!this.theme) {
       const theme = this.service.config.theme ? this.service.config.theme : 'snow'
-      this.themeClass = `ql-${theme} ngx-quill-view-html`
+      this.themeClass = `ql-${theme} fpmk-ngx-quill-view-html`
     }
     if (changes.content) {
       const content = changes.content.currentValue

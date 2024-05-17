@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core'
 
-import { QUILL_CONFIG_TOKEN, QuillConfig } from 'ngx-quill/config'
+import { QUILL_CONFIG_TOKEN, QuillConfig } from 'fpmk-ngx-quill/config'
 
 import { QuillEditorComponent } from './quill-editor.component'
 import { QuillViewHTMLComponent } from './quill-view-html.component'

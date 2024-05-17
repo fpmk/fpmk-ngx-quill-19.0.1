@@ -16,8 +16,8 @@
       "dom"
     ],
     "paths": {
-      "ngx-quill/config": ["projects/ngx-quill/config/src/public_api.ts"],
-      "ngx-quill": ["projects/ngx-quill/src/public_api.ts"]
+      "fpmk-ngx-quill/config": ["projects/fpmk-ngx-quill/config/src/public_api.ts"],
+      "fpmk-ngx-quill": ["projects/fpmk-ngx-quill/src/public_api.ts"]
     }
   },
   "angularCompilerOptions": {

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-quill",
+  "name": "fpmk-ngx-quill",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,18 +8,19 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "cp:readme": "cp ./README.md ./dist/ngx-quill"
+    "cp:readme": "cp ./README.md ./dist/fpmk-ngx-quill",
+    "publish": "cd dist/fpmk-ngx-quill && npm publish"
   },
   "license": "MIT",
   "author": {
     "name": "Bengt Weiße"
   },
   "description": "An angular component for the easy use of the QuillJS richt text editor.",
-  "bugs": "https://github.com/KillerCodeMonkey/ngx-quill/issues",
-  "homepage": "https://github.com/KillerCodeMonkey/ngx-quill",
+  "bugs": "https://github.com/KillerCodeMonkey/fpmk-ngx-quill/issues",
+  "homepage": "https://github.com/KillerCodeMonkey/fpmk-ngx-quill",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KillerCodeMonkey/ngx-quill"
+    "url": "https://github.com/KillerCodeMonkey/fpmk-ngx-quill"
   },
   "engines": {
     "node": ">= 16",

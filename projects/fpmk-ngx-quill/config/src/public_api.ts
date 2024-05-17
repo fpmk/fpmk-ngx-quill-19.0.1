@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ngx-quill/config
+ * Public API Surface of fpmk-ngx-quill/config
  */
 
 export * from './quill-defaults'

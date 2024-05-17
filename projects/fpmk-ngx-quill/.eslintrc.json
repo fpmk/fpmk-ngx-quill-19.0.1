@@ -10,8 +10,8 @@
       ],
       "parserOptions": {
         "project": [
-          "projects/ngx-quill/tsconfig.lib.json",
-          "projects/ngx-quill/tsconfig.spec.json"
+          "projects/fpmk-ngx-quill/tsconfig.lib.json",
+          "projects/fpmk-ngx-quill/tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },

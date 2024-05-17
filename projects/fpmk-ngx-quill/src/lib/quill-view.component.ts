@@ -22,7 +22,7 @@ import {
 import { Subscription } from 'rxjs'
 import { mergeMap } from 'rxjs/operators'
 
-import { CustomOption, CustomModule, QuillModules } from 'ngx-quill/config'
+import { CustomOption, CustomModule, QuillModules } from 'fpmk-ngx-quill/config'
 
 import {getFormat} from './helpers'
 import { QuillService } from './quill.service'
@@ -32,7 +32,7 @@ import { DomSanitizer } from '@angular/platform-browser'
   encapsulation: ViewEncapsulation.None,
   selector: 'quill-view',
   styles: [`
-.ql-container.ngx-quill-view {
+.ql-container.fpmk-ngx-quill-view {
   border: 0;
 }
 `],
@@ -161,7 +161,7 @@ export class QuillViewComponent implements AfterViewInit, OnChanges, OnDestroy, 
         })
       })
 
-      this.renderer.addClass(this.editorElem, 'ngx-quill-view')
+      this.renderer.addClass(this.editorElem, 'fpmk-ngx-quill-view')
 
       if (this.content) {
         this.valueSetter(this.quillEditor, this.content)

@@ -20,7 +20,7 @@ module.exports = function (config) {
       'src/**/*.ts': ['coverage']
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, '../../coverage/ngx-quill'),
+      dir: require('path').join(__dirname, '../../coverage/fpmk-ngx-quill'),
       reporters: [
         { type: 'html', subdir: 'report-html' },
         { type: 'lcovonly', subdir: '.', file: 'report-lcovonly.txt' },

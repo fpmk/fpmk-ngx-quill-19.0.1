@@ -30,7 +30,7 @@ import { debounceTime, mergeMap } from 'rxjs/operators'
 
 import { ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, Validator } from '@angular/forms'
 
-import { defaultModules, QuillModules, CustomOption, CustomModule } from 'ngx-quill/config'
+import { defaultModules, QuillModules, CustomOption, CustomModule } from 'fpmk-ngx-quill/config'
 
 import { getFormat } from './helpers'
 import { QuillService } from './quill.service'
@@ -101,7 +101,7 @@ export abstract class QuillEditorBase implements AfterViewInit, ControlValueAcce
   @Input() filterNull = false
   @Input() debounceTime?: number
   /*
-  https://github.com/KillerCodeMonkey/ngx-quill/issues/1257 - fix null value set
+  https://github.com/KillerCodeMonkey/fpmk-ngx-quill/issues/1257 - fix null value set
 
   provide default empty value
   by default null

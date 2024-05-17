@@ -3,7 +3,7 @@ import { Injectable, Inject, Injector, Optional } from '@angular/core'
 import { defer, firstValueFrom, isObservable, Observable } from 'rxjs'
 import { shareReplay } from 'rxjs/operators'
 
-import { defaultModules, QUILL_CONFIG_TOKEN, QuillConfig, CustomModule } from 'ngx-quill/config'
+import { defaultModules, QUILL_CONFIG_TOKEN, QuillConfig, CustomModule } from 'fpmk-ngx-quill/config'
 
 @Injectable({
   providedIn: 'root',
@@ -71,7 +71,7 @@ export class QuillService {
   }
 
   /**
-   * Marked as internal so it won't be available for `ngx-quill` consumers, this is only
+   * Marked as internal so it won't be available for `fpmk-ngx-quill` consumers, this is only
    * internal method to be used within the library.
    *
    * @internal
